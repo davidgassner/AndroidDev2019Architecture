@@ -19,7 +19,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/headline_margin"
             android:layout_marginBottom="@dimen/headline_margin"
-            android:textSize="36sp"/>
+            android:textSize="36sp"
+            android:freezesText="true"/>
 
     <ImageView
             android:id="@+id/die1"
