@@ -7,8 +7,8 @@ import com.example.android.architecture.R
 import com.example.android.architecture.util.DiceHelper
 
 class DiceViewModel(app: Application) : AndroidViewModel(app) {
-    val headline: MutableLiveData<String> = MutableLiveData()
-    val dice: MutableLiveData<IntArray?> = MutableLiveData()
+    val headline = MutableLiveData<String>()
+    val dice = MutableLiveData<IntArray?>()
 
     init {
         headline.value = getApplication<Application>().getString(R.string.roll_em)
