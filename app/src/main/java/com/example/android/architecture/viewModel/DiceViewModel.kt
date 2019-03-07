@@ -11,8 +11,8 @@ class DiceViewModel(app: Application) : AndroidViewModel(app) {
     val dice: MutableLiveData<IntArray?> = MutableLiveData()
 
     init {
-        dice.value = intArrayOf(6, 6, 6, 6, 6)
         headline.value = getApplication<Application>().getString(R.string.roll_em)
+        dice.value = intArrayOf(6, 6, 6, 6, 6)
     }
 
     fun rollDice() {
