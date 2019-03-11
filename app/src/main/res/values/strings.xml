@@ -12,4 +12,5 @@
     <string name="two_pairs">Two pairs!</string>
     <string name="pair">That\'s a pair!</string>
     <string name="nothing_special">Nothing special</string>
+    <string name="welcome">Welcome to my app</string>
 </resources>

@@ -2,15 +2,24 @@ package com.example.android.architecture
 
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private val imageViews by lazy {
-        arrayOf<ImageView>(die1, die2, die3, die4, die5)
+        arrayOf<ImageView>(
+            findViewById(R.id.die1),
+            findViewById(R.id.die2),
+            findViewById(R.id.die3),
+            findViewById(R.id.die4),
+            findViewById(R.id.die5)
+        )
+    }
+    private val headline by lazy {
+        findViewById<TextView>(R.id.headline)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         lifecycle.addObserver(MyLifecycleObserver())
 
-        headline.text = "Welcome to my app"
+        headline.text = getString(R.string.welcome)
 
         for (imageView in imageViews) {
             imageView.setImageResource(R.drawable.die_6)
