@@ -5,7 +5,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,12 +27,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { fabClickHandler() }
-
         lifecycle.addObserver(MyLifecycleObserver())
 
+        fab.setOnClickListener { fabClickHandler() }
         headline.text = getString(R.string.welcome)
-
         for (imageView in imageViews) {
             imageView.setImageResource(R.drawable.die_6)
         }
