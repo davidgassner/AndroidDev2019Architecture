@@ -42,7 +42,9 @@ class DiceActivity : AppCompatActivity() {
 
         lifecycle.addObserver(MyLifecycleObserver())
 
-        fab.setOnClickListener { viewModel.rollDice() }
+        val configChange = savedInstanceState?.getBoolean(CONFIG_CHANGE)
+                ?: false
+        if (configChange.not()) viewModel.rollDice()
 
     }
 
@@ -59,6 +61,11 @@ class DiceActivity : AppCompatActivity() {
             }
             imageViews[i].setImageResource(drawableId)
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        outState?.putBoolean(CONFIG_CHANGE, true)
+        super.onSaveInstanceState(outState)
     }
 
 }
