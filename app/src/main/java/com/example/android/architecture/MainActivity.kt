@@ -5,10 +5,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
 import com.example.android.architecture.util.DiceHelper
+import com.example.android.architecture.viewModel.DiceViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var viewModel : DiceViewModel
 
     private lateinit var dice: IntArray
     private lateinit var headlineText: String
@@ -30,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        viewModel = ViewModelProviders.of(this)
+            .get(DiceViewModel::class.java)
 
         headlineText = savedInstanceState?.getString(HEADLINE_TEXT)
             ?: getString(R.string.welcome)
