@@ -34,6 +34,9 @@ class DiceActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dice)
         setSupportActionBar(toolbar)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_check)
+
         viewModel = ViewModelProviders.of(this)
             .get(DiceViewModel::class.java)
         viewModel.headline.observe(this, Observer {
