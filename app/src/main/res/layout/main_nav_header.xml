@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="176dp"
+              android:background="@color/colorAccent"
+              android:padding="@dimen/container_padding">
+
+
+    <TextView
+            android:text="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="36sp"
+            android:textColor="@android:color/white"
+            android:gravity="center_horizontal"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:layout_width="@dimen/header_dice_size"
+                android:layout_height="@dimen/header_dice_size"
+                android:layout_margin="@dimen/header_dice_margin"
+                android:src="@drawable/die_6"/>
+
+        <ImageView
+                android:layout_width="@dimen/header_dice_size"
+                android:layout_height="@dimen/header_dice_size"
+                android:layout_margin="@dimen/header_dice_margin"
+                android:src="@drawable/die_6"/>
+
+        <ImageView
+                android:layout_width="@dimen/header_dice_size"
+                android:layout_height="@dimen/header_dice_size"
+                android:layout_margin="@dimen/header_dice_margin"
+                android:src="@drawable/die_6"/>
+
+        <ImageView
+                android:layout_width="@dimen/header_dice_size"
+                android:layout_height="@dimen/header_dice_size"
+                android:layout_margin="@dimen/header_dice_margin"
+                android:src="@drawable/die_6"/>
+
+        <ImageView
+                android:layout_width="@dimen/header_dice_size"
+                android:layout_height="@dimen/header_dice_size"
+                android:layout_margin="@dimen/header_dice_margin"
+                android:src="@drawable/die_6"/>
+    </LinearLayout>
+</LinearLayout>
