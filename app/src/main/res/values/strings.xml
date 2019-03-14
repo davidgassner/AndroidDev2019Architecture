@@ -16,4 +16,6 @@
     <string name="share">Share</string>
     <string name="settings">Settings</string>
     <string name="about">About</string>
+    <string name="open_nav_drawer">Open navigation drawer</string>
+    <string name="close_nav_drawer">Close navigation drawer</string>
 </resources>
