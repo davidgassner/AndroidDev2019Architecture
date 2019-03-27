@@ -30,8 +30,7 @@ class MainActivity : AppCompatActivity() {
      * Initialize the viewModel
      */
     private fun initViewModel() {
-        viewModel = ViewModelProviders
-            .of(this)
+        viewModel = ViewModelProviders.of(this)
             .get(DiceViewModel::class.java)
         viewModel.headline.observe(this, Observer { headline.text = it })
         viewModel.dice.observe(this, Observer { updateDisplay(it) })
